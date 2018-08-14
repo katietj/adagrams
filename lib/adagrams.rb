@@ -16,3 +16,22 @@ users_hand = []
 end
 
 puts "These are the letters you can use: #{draw_letters}"
+
+#input = ""
+
+#def uses_available_letters(input, letters_in_hand)
+input = "better"
+#input_array << input.split('').each {|c|}
+input = input.split('').each {|c|}
+
+
+
+
+#end
+
+puts "#{input}"
+#input = 'abcdef'
+
+#input.split('').each { |c|
+  #  puts c
+#}
