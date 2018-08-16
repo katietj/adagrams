@@ -104,9 +104,17 @@ def score_word(word)
 return score
 end
 
-def highest_score_from_words(words)
-  scores = []
-  words.each do |word|
-    scores << score_word(word)
-  end
+def highest_score_from_words (words)
+ scores = []
+ word_scores = []
+ words.each do |word|
+   scores << score_word(word)
+ end
+ i = 0
+ words.each do |key, value|
+   word_scores << {word:words[i], score:scores[i]}
+   i += 1
+ end
+
+ return word_scores
 end
