@@ -15,7 +15,6 @@ def draw_letters
   return users_hand
 end
 
-#puts "These are the letters you can use: #{draw_letters}"
 
 
 input = ""
@@ -45,57 +44,57 @@ def score_word(word)
  score = 0
  word.each do |letter|
    case letter
-   when "a"
+   when "a","A"
      score += 1
-   when "b"
+   when "b", "B"
      score += 3
-   when "c"
+   when "c", "C"
      score += 3
-   when "d"
+   when "d", "D"
      score += 2
-   when "e"
+   when "e", "E"
      score += 1
-   when "f"
+   when "f", "F"
      score += 3
-   when "g"
+   when "g", "G"
      score += 2
-   when "h"
+   when "h", "H"
      score += 4
-   when "i"
+   when "i", "I"
      score += 1
-   when "j"
+   when "j", "J"
      score += 8
-   when "k"
+   when "k", "K"
      score += 5
-   when "l"
+   when "l", "L"
      score += 1
-   when "m"
+   when "m", "M"
      score += 3
-   when "n"
+   when "n", "N"
      score += 1
-   when "o"
+   when "o", "O"
      score += 1
-   when "p"
+   when "p", "P"
      score += 3
-   when "q"
+   when "q", "Q"
      score += 10
-   when "r"
+   when "r", "R"
      score += 1
-   when "s"
+   when "s", "S"
      score += 1
-   when "t"
+   when "t", "T"
      score += 1
-   when "u"
+   when "u", "U"
      score += 1
-   when "v"
+   when "v", "V"
      score += 4
-   when "w"
+   when "w", "W"
      score += 4
-   when "x"
+   when "x", "X"
      score += 8
-   when "y"
+   when "y", "Y"
      score += 4
-   when "z"
+   when "z," "Z"
      score += 10
    end
  end
@@ -105,4 +104,9 @@ def score_word(word)
 return score
 end
 
-puts score_word("cat")
+def highest_score_from_words(words)
+  scores = []
+  words.each do |word|
+    scores << score_word(word)
+  end
+end
