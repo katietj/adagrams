@@ -104,7 +104,7 @@ def score_word(word)
   return score
 end
 
-def highest_score_from_words(words)
+def highest_score_from(words)
   scores = []
   lengths = []
   word_scores = []
@@ -149,6 +149,3 @@ def highest_score_from_words(words)
     return winner_array.first
   end
 end
-
-
-p
